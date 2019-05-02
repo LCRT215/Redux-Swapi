@@ -11,17 +11,17 @@
 
 import axios from "axios";
 
-export const FETCH_START = "FETCH_START";
-export const FETCH_SUCCESS = "FETCH_SUCCESS";
-export const FETCH_FAILURE = "FETCH_FAILURE";
+export const FETCHING = "FETCHING";
+export const SUCCESS = "SUCCESS";
+export const FAILURE = "FAILURE";
 
 export const getCharacter = () => {
   return function(dispatch) {
-    dispatch({ type: FETCH_START });
+    dispatch({ type: FETCHING });
 
     axios
       .get(`https://swapi.co/api/people/`)
-      .then(result => dispatch({ type: FETCH_SUCCESS, payload: result.data }))
-      .catch(error => dispatch({ type: FETCH_FAILURE, payload: error }));
+      .then(result => dispatch({ type: SUCCESS, payload: result.data }))
+      .catch(error => dispatch({ type: FAILURE, payload: error }));
   };
 };
