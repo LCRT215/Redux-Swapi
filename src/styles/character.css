@@ -1,0 +1,16 @@
+.charDiv {
+  border: solid grey 5px;
+  margin: auto;
+  margin-bottom: 30px;
+  padding: 10px;
+  width: 400px;
+  text-align: center;
+}
+.charDiv:hover {
+  background-color: aliceblue;
+}
+
+.charName {
+  font-family: fantasy;
+  font-size: 28px;
+}
